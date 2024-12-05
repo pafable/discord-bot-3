@@ -1,0 +1,31 @@
+[build-system]
+requires = [
+    "setuptools >= 75.6.0",
+    "wheel >= 0.45.1"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    {name = "pafable", email = "pafable@github.com"}
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.12"
+]
+
+dependencies = [
+    "boto3",
+    "discord",
+    "python-dotenv"
+]
+
+description = "Discord Bot 3"
+license = {file = "LICENSE"}
+name = "discord-bot-3"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.0.1"
+
+[project.urls]
+"Homepage" = "https://github.com/pafable/discord-bot-3"

@@ -1,0 +1,11 @@
+*/.env
+.dockerignore
+.eggs/
+.env
+.git
+.gitignore
+.idea
+.venv
+Dockerfile
+eggs/
+tests

@@ -39,5 +39,5 @@ b. Run Container
 If you're testing code changes quickly, you can run the code directly on your machine.
 This will utilize python on your machine instead of running on a container.
 ```shell
-    make run
+  make run
 ```

@@ -15,8 +15,8 @@ deps:
 	$(PIP) install -r requirements.txt
 
 deps-dev:
-		$(PIP) install --upgrade pip
-		$(PIP) install -r requirements-dev.txt
+	$(PIP) install --upgrade pip
+	$(PIP) install -r requirements-dev.txt
 
 lint: deps
 	$(PYTHON) -m pylint --fail-under=8 discord-bot-3

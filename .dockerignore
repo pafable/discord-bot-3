@@ -5,7 +5,9 @@
 .git
 .gitignore
 .idea
+.pytest_cache
 .venv
 Dockerfile
+cicd
 eggs/
 tests

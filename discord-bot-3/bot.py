@@ -18,6 +18,7 @@ GUILD_ID: Final[Object] = Object(id=os.getenv("DISCORD_ID"))
 INTENTS: Final[Intents] = Intents.default()
 INTENTS.message_content = True # NOQA
 RESP_FILE: Final[str] = "response.md"
+VERSION: Final[str] = "0.0.1"
 
 client: Final[Client] = commands.Bot(command_prefix="/", intents=INTENTS) # pylint: disable=C0103
 
@@ -29,7 +30,7 @@ async def send_hello(message: Message, user_message: str) -> None:
     :param user_message:
     :return:
     """
-    greetings = [
+    greetings: Final[list[str]] = [
         "Hello",
         "Hey",
         "Hi",
@@ -42,7 +43,7 @@ async def send_hello(message: Message, user_message: str) -> None:
     ]
 
     if not user_message:
-        print("Message was empty")
+        logging.info("Message was empty")
         return
 
     if is_private := user_message[0] == "?":
@@ -180,3 +181,12 @@ async def show_models(interaction: Interaction) -> None:
         titang1 = Titan Text G1 - Express
     """
     await interaction.response.send_message(f"available llm models that can be passed into /ask: {models}")
+
+@client.tree.command(name="version", description="shows version of bot", guild=GUILD_ID)
+async def show_version(interaction: Interaction) -> None:
+    """
+    Shows version of bot
+    :param interaction:
+    :return:
+    """
+    await interaction.response.send_message(f"discord-bot-3 version: {VERSION}")

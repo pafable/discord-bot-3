@@ -41,3 +41,11 @@ This will utilize python on your machine instead of running on a container.
 ```shell
   make run
 ```
+
+## Discord Commands
+| Command  | options                         | Description                                                                                  |
+|:---------|:--------------------------------|:---------------------------------------------------------------------------------------------|
+| /ask     | question: string, model: string | Ask an LLM model a question. You can change the default LLM (Titan) by entering model option |
+| /models  |                                 | List all of the supported models that can be passed into /ask                                |
+| /roll    | sides: integer                  | Roll a dice. Default sides on a dice is 6                                                    |
+| /version |                                 | Show bot version                                                                             |

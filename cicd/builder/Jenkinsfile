@@ -1,4 +1,4 @@
 @Library("devops-libs")
 _
 
-discordBuilder()
+discordBotBuilder {}

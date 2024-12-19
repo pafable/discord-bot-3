@@ -1,4 +1,6 @@
 @Library("devops-libs")
 _
 
-discordBotBuilder {}
+discordBotBuilder {
+    dockerFilePath = 'Dockerfile'
+}

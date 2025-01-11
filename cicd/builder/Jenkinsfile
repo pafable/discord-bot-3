@@ -4,5 +4,6 @@ _
 containerImageBuilder {
     appName = 'discord-bot-3'
     appVersion = '0.0.1'
+    cron = null
     dockerFilePath = 'Dockerfile'
 }
